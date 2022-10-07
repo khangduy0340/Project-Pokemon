@@ -5,6 +5,7 @@
 #include "Pokemon.h"
 #include "Geninja.h"
 #include "Charizard.h"
+#include "Moves.h"
 using namespace std;
 class Function{
 public:
@@ -23,6 +24,6 @@ void showSpeed(int speed);
 void showElement(int element);
 void showStats(int PH, int PS, int PE, int EH, int ES, int EE);
 void welcomeScreen(void);
-void battleCharizard(Charizard& C, Geninja& S);
+void battleCharizard(Charizard& C, Geninja& S,Moves& M);
 };
 #endif

@@ -8,13 +8,13 @@ Geninja::Geninja(int H, int S, int E) {
     Element = E;
   }
   int Geninja::attack(void) {
-    srand(time(NULL));
+   
     int attack = 1;
-    cout << "Genninja strikes you for" << attack << " damage" << endl;
+    cout << "Genninja strikes you for " << attack << " damage" << endl;
     return attack;
   }
   int Geninja::specialAttack(void) {
-    srand(time(NULL));
+    
     int specialDamage = 2;
     cout << "Genninja use special attack " << specialDamage << " damage "
          << endl;
@@ -23,8 +23,8 @@ Geninja::Geninja(int H, int S, int E) {
   }
 
   int Geninja::enemyAction() {
-    srand(time(NULL));
-    int action = 1 + (rand() % 3);
+    
+    int action = 1;
     if (action == 1) {
       return attack();
     }
@@ -32,5 +32,5 @@ Geninja::Geninja(int H, int S, int E) {
     if (action == 2) {
       return specialAttack();
     }
-    return 0;
+    return attack();
   };

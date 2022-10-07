@@ -2,15 +2,12 @@
 #define CHARIZARD_H
 #include <ctime>
 #include <iostream>
-
+#include "Moves.h"
 #include "Pokemon.h"
 using namespace std;
 
-class Charizard : public Pokemon {
- public:
+class Charizard : public Pokemon,public Moves {
+public:
   Charizard(int H, int S, int E);
-  int attack();
-  int elementAttack();
-  int charizardAction();
 };
 #endif

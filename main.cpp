@@ -8,20 +8,21 @@
 #include "Charizard.h"
 #include "Geninja.h"
 #include "Function.h"
+#include "Moves.h"
 using namespace std;
 int main() {
-  string playerChoice;
+  int playerChoice;
   Charizard Charizard(10, 5, 2);
-  Geninja Geninja(8, 10, 2);
+  Geninja Geninja(8, 10, 1);
+  Moves Move;
   Function a;
   a.welcomeScreen();
   cin >> playerChoice;
   a.lineBreak();
-  if (playerChoice == "Charizard" || playerChoice == "charizard") {
+  if (playerChoice == 1) {
     while (Charizard.getHealth() > 0) {
       a.genninjaEncounter();
-      a.battleCharizard(Charizard, Geninja);
-      cout << "Ok"<<endl;
+      a.battleCharizard(Charizard,Geninja,Move);
       break;
     }
   }
