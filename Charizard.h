@@ -8,6 +8,6 @@ using namespace std;
 
 class Charizard : public Pokemon,public Moves {
 public:
-  Charizard(int H, int S, int E);
+  Charizard(int H, int S, int E,string N);
 };
 #endif

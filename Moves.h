@@ -5,13 +5,14 @@ using namespace std;
 
 class Moves {
  protected:
-  string Name;
+  string moName;
   string Type;
   int Power;
 
  public:
-  int normalMove();
-  int elementMove();
-  int actionBoard();
+  int enemyAction(int t);
+  int normalMove(int t);
+  int elementMove(int t);
+  int actionBoard(int t);
 };
 #endif

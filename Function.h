@@ -9,21 +9,19 @@
 using namespace std;
 class Function{
 public:
-
 void titleScreen();
 void story();
 void PokemonCreation();
 void chooseCharizard();
 void gameOver();
-void winnerGenninja();
-void winnerCharizard();
-void genninjaEncounter();
+void winMessage(string P);
+void enemyEncounter(string P);
 void lineBreak();
 void showHealth(int health);
 void showSpeed(int speed);
 void showElement(int element);
-void showStats(int PH, int PS, int PE, int EH, int ES, int EE);
+void showStats(int PH, int PS, int PE, int EH, int ES, int EE,string PN,string EN);
 void welcomeScreen(void);
-void battleCharizard(Charizard& C, Geninja& S,Moves& M);
+void battle(Pokemon& C, Pokemon& S,Moves& M);
 };
 #endif

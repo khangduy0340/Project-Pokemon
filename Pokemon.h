@@ -8,14 +8,16 @@ class Pokemon {
   int Health;
   int Element;
   int Speed;
+  string Name;
 
  public:
   Pokemon();
-  Pokemon(int Health, int Element, int Speed);
+  Pokemon(int Health, int Element, int Speed,string Name);
   void takeDamage(int D);
-  int getHealth(void);
-  int getSpeed(void);
-  int getElement(void);
+  int getHealth();
+  int getSpeed();
+  int getElement();
+  string getName();
  
 };
 #endif

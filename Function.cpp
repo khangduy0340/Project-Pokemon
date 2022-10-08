@@ -11,13 +11,13 @@ void Function::story() { cout << "You are walking around then a pokemon show up(
 void Function::PokemonCreation() {
   cout << "Choose a pokemon: " << endl;
   cout << "1. Charizard" << endl;
+  cout << "2. Geninja" << endl;
   cout << "Your choice: ";
 }
 void Function::chooseCharizard() { cout << "Choose Charizard" << endl; }
 void Function::gameOver() { cout << "game over" << endl; }
-void Function::winnerGenninja() { cout << "Winner Genninja!" << endl; }
-void Function::winnerCharizard() { cout << "Winner charizard" << endl; }
-void Function::genninjaEncounter() { cout << "Encounter Geninja!" << endl;
+void Function::winMessage(string P) { cout << P << " wins!" << endl; }
+void Function::enemyEncounter(string P) { cout << "Encounter " << P << endl;
 cout <<"*******************************************************************"<<endl; }
 void Function::lineBreak() {
   cout << "*******************************************************************" << endl;
@@ -50,8 +50,8 @@ void Function::showElement(int element)
   }
 
 
-void Function::showStats(int PH, int PS, int PE, int EH, int ES, int EE) {
-  cout << "Charizard" << endl;                                                      
+void Function::showStats(int PH, int PS, int PE, int EH, int ES, int EE,string PN,string EN) {
+  cout << "Your Pokemon: "<< PN << endl;                                                      
   Function::showHealth(PH);
   cout << endl;
   Function::showSpeed(PS);
@@ -59,7 +59,7 @@ void Function::showStats(int PH, int PS, int PE, int EH, int ES, int EE) {
   Function::showElement(PE);
   cout << endl;
   cout << "*******************************************************************" << endl;
-  cout << "Geninja" << endl;
+  cout << "Wild Pokemon: "<< EN << endl;
   Function::showHealth(EH);
   cout << endl;
   Function::showSpeed(ES);
@@ -79,15 +79,16 @@ void Function::welcomeScreen(void) {
   Function::PokemonCreation();
 }
 
-void Function::battleCharizard(Charizard& C, Geninja& S, Moves& M) {
+  void Function::battle(Pokemon& C, Pokemon& S, Moves& M) {
   int k =0;
+  Function::enemyEncounter(S.getName());
   while (C.getHealth() >= 0 && S.getHealth() >= 0) {
     Function::showStats(C.getHealth(), C.getSpeed(), C.getElement(), S.getHealth(),
-              S.getSpeed(), S.getElement());
-    S.takeDamage(M.actionBoard());
+    S.getSpeed(), S.getElement(),C.getName(),S.getName());
+    S.takeDamage(M.actionBoard(1));
     cout << endl;
     cout << "EMEMY MOVE: ";
-    C.takeDamage(S.enemyAction());
+    C.takeDamage(M.enemyAction(2));
     cout << endl;
     k++;
     lineBreak();
@@ -95,9 +96,9 @@ void Function::battleCharizard(Charizard& C, Geninja& S, Moves& M) {
     lineBreak();
   }
   if (C.getHealth() >= 0) {
-    winnerCharizard();
+    winMessage(C.getName());
   } else {
-    winnerGenninja();
+    winMessage(S.getName());
     gameOver();
   };
 }

@@ -1,3 +1,5 @@
+#ifndef POKEMONMENU_H
+#define POKEMONMENU_H
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
@@ -11,7 +13,5 @@
 #include "Moves.h"
 #include "PokemonMenu.h"
 using namespace std;
-int main() {
- PokemonMenu();
- return 0;
-}
+void PokemonMenu();
+#endif
