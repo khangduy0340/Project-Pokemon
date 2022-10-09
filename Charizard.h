@@ -6,8 +6,10 @@
 #include "Pokemon.h"
 using namespace std;
 
-class Charizard : public Pokemon,public Moves {
+class Charizard : public Moves {
 public:
+  Charizard():Moves::Moves();
   Charizard(int H, int S, int E,string N);
-};
+  }
+  ;
 #endif

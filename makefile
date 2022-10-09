@@ -5,7 +5,7 @@
 all: game
     
 game: 
-	 g++ -o game Moves.cpp Pokemon.cpp Charizard.cpp Geninja.cpp Function.cpp PokemonMenu.cpp main.cpp
+	 g++ -o game BattleSystem.cpp Pokemon.cpp Charizard.cpp Geninja.cpp Function.cpp PokemonMenu.cpp main.cpp
     
 
 clean:

@@ -7,8 +7,6 @@
 #include "Charizard.h"
 #include "Moves.h"
 using namespace std;
-class Function{
-public:
 void titleScreen();
 void story();
 void PokemonCreation();
@@ -21,7 +19,8 @@ void showHealth(int health);
 void showSpeed(int speed);
 void showElement(int element);
 void showStats(int PH, int PS, int PE, int EH, int ES, int EE,string PN,string EN);
-void welcomeScreen(void);
-void battle(Pokemon& C, Pokemon& S,Moves& M);
-};
+void welcomeScreen(void); 
+void battle(Pokemon& C, Pokemon& S);
+int actionBoard(int t);
+
 #endif

@@ -15,23 +15,21 @@ void PokemonMenu() {
   int playerChoice;
   Charizard Charizard(10, 5, 2,"Charizard");
   Geninja Geninja(8, 10, 1,"Geninja");
-  
   Moves Move;
-  Function a;
-  a.welcomeScreen();
+  welcomeScreen();
   cin >> playerChoice;
-  a.lineBreak();
+  lineBreak();
   if (playerChoice == 1) {
     while (Charizard.getHealth() > 0 && Geninja.getHealth() > 0) {
-      a.battle(Charizard, Geninja, Move);
+      battle(Charizard, Geninja);
       break;
     }
   } else if (playerChoice == 2) {
     cout << "c2" << endl;
     while (Geninja.getHealth() > 0 && Geninja.getHealth() > 0) {
   
-      a.battle(Geninja, Geninja, Move);
+      battle(Geninja, Geninja);
       break;
     }
-  }
+  } 
 }

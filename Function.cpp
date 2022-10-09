@@ -4,28 +4,29 @@
 #include "Pokemon.h"
 #include "Geninja.h"
 #include "Charizard.h"
+#include "BattleSystem.h"
 using namespace std;
 
-void Function::titleScreen() { cout << "Title screen!" << endl; }
-void Function::story() { cout << "You are walking around then a pokemon show up(Geninja)!" << endl; }
-void Function::PokemonCreation() {
+void titleScreen() { cout << "Title screen!" << endl; }
+void story() { cout << "You are walking around then a pokemon show up(Geninja)!" << endl; }
+void PokemonCreation() {
   cout << "Choose a pokemon: " << endl;
   cout << "1. Charizard" << endl;
   cout << "2. Geninja" << endl;
   cout << "Your choice: ";
 }
-void Function::chooseCharizard() { cout << "Choose Charizard" << endl; }
-void Function::gameOver() { cout << "game over" << endl; }
-void Function::winMessage(string P) { cout << P << " wins!" << endl; }
-void Function::enemyEncounter(string P) { cout << "Encounter " << P << endl;
+void chooseCharizard() { cout << "Choose Charizard" << endl; }
+void gameOver() { cout << "game over" << endl; }
+void winMessage(string P) { cout << P << " wins!" << endl; }
+void enemyEncounter(string P) { cout << "Encounter " << P << endl;
 cout <<"*******************************************************************"<<endl; }
-void Function::lineBreak() {
+void lineBreak() {
   cout << "*******************************************************************" << endl;
 }
 
 // This is the functions that show info about the player and monster aswell as
 // inventory
-void Function::showHealth(int health) {
+void showHealth(int health) {
   int hearts = health;
   cout << "Health [";
   for (int i = 0; i < hearts; i++) {
@@ -34,7 +35,7 @@ void Function::showHealth(int health) {
   cout << "]: " << health;
 }
 
-void Function::showSpeed(int speed) {
+void showSpeed(int speed) {
   cout << "Speed  [";
   for (int i = 0; i < speed; i++) {
     cout << "o ";
@@ -42,7 +43,7 @@ void Function::showSpeed(int speed) {
   cout << "]: " << speed;
 }
 
-void Function::showElement(int element) 
+void showElement(int element) 
 { if(element==1){
   cout << "Element: Water";}
   else if(element==2){
@@ -50,45 +51,45 @@ void Function::showElement(int element)
   }
 
 
-void Function::showStats(int PH, int PS, int PE, int EH, int ES, int EE,string PN,string EN) {
+void showStats(int PH, int PS, int PE, int EH, int ES, int EE,string PN,string EN) {
   cout << "Your Pokemon: "<< PN << endl;                                                      
-  Function::showHealth(PH);
+  showHealth(PH);
   cout << endl;
-  Function::showSpeed(PS);
+  showSpeed(PS);
   cout <<endl;
-  Function::showElement(PE);
+  showElement(PE);
   cout << endl;
   cout << "*******************************************************************" << endl;
   cout << "Wild Pokemon: "<< EN << endl;
-  Function::showHealth(EH);
+  showHealth(EH);
   cout << endl;
-  Function::showSpeed(ES);
+  showSpeed(ES);
   cout << endl;                          
-  Function::showElement(EE);
+  showElement(EE);
   cout << endl;
   cout << "*******************************************************************";
   cout << endl;
 }
 
-void Function::welcomeScreen(void) {
-  Function::titleScreen();
+void welcomeScreen(void) {
+  titleScreen();
   Sleep(3);
-  Function::story();
-  Function:: lineBreak();
+  story();
+  lineBreak();
   Sleep(3);
-  Function::PokemonCreation();
+  PokemonCreation();
 }
 
-  void Function::battle(Pokemon& C, Pokemon& S, Moves& M) {
+  void battle(Pokemon& C, Pokemon& S) {
   int k =0;
-  Function::enemyEncounter(S.getName());
+  enemyEncounter(S.getName());
   while (C.getHealth() >= 0 && S.getHealth() >= 0) {
-    Function::showStats(C.getHealth(), C.getSpeed(), C.getElement(), S.getHealth(),
+    showStats(C.getHealth(), C.getSpeed(), C.getElement(), S.getHealth(),
     S.getSpeed(), S.getElement(),C.getName(),S.getName());
-    S.takeDamage(M.actionBoard(1));
+    S.takeDamage(actionBoard(1));
     cout << endl;
     cout << "EMEMY MOVE: ";
-    C.takeDamage(M.enemyAction(2));
+    C.takeDamage(enemyAction(2));
     cout << endl;
     k++;
     lineBreak();
