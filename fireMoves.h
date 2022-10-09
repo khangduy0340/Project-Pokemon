@@ -1,15 +1,14 @@
 #ifndef FIREMOVES_H
 #define FIREMOVES_H
 #include <iostream>
+#include "Moves.h"
 using namespace std;
 
-class fireMoves {
- 
+class fireMoves: public Moves {
 
- public:
-  int enemyAction(int t);
-  int normalMove(int t);
-  int elementMove(int t);
-  int actionBoard(int t);
+public:
+string fireAttack;
+int fireAttack; 
+fireMoves(string Mname,string Mtype,int Power);
 };
 #endif

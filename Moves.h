@@ -1,15 +1,13 @@
 #ifndef MOVES_H
 #define MOVES_H
 #include <iostream>
-#include "Pokemon.h"
 using namespace std;
 
-class Moves:public Pokemon {
- protected:
+class Moves {
+ private:
   string moName;
   string Type;
   int Power;
-
  public:
   Moves(string Mname,string Mtype,int Power);
   string getMoveName();

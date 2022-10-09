@@ -21,7 +21,7 @@ Pokemon::Pokemon(int Health1,int Element1,int Speed1,string Name1){
 void Pokemon::takeDamage(int D) { Health = Health - D; }
 int Pokemon::getHealth(void) { return Health; }
 int Pokemon::getSpeed(void) { return Speed; }
-int Pokemon::getElement(void) { return Element; }
+string Pokemon::getElement(void) { return Element; }
 string Pokemon::getName(){return Name;}
 
 

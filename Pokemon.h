@@ -6,18 +6,18 @@ using namespace std;
 class Pokemon {
  protected:
   int Health;
-  int Element;
+  string Element;
   int Speed;
   string Name;
 
  public:
   Pokemon();
   Pokemon(int Health, int Element, int Speed,string Name);
-  void takeDamage(int D);
-  int getHealth();
-  int getSpeed();
-  int getElement();
-  string getName();
+  virtual void takeDamage(int D);
+  virtual int getHealth();
+  virtual int getSpeed();
+  virtual string getElement();
+  virtual string getName();
  
 };
 #endif

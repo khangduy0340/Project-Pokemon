@@ -13,9 +13,9 @@
 using namespace std;
 void PokemonMenu() {
   int playerChoice;
-  Charizard Charizard(10, 5, 2,"Charizard");
-  Geninja Geninja(8, 10, 1,"Geninja");
-  Moves Move;
+  Charizard Charizard("Charizard");
+  Pokemon Geninja(8, 10, 1,"Geninja");
+  cout << "Charizard has first skill: " << Charizard.getM1().getMoveName();
   welcomeScreen();
   cin >> playerChoice;
   lineBreak();
@@ -27,7 +27,6 @@ void PokemonMenu() {
   } else if (playerChoice == 2) {
     cout << "c2" << endl;
     while (Geninja.getHealth() > 0 && Geninja.getHealth() > 0) {
-  
       battle(Geninja, Geninja);
       break;
     }

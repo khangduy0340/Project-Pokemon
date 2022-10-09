@@ -6,10 +6,11 @@
 #include "Pokemon.h"
 using namespace std;
 
-class Charizard : public Moves {
+class Charizard: public Pokemon  {
+protected:
+Moves M1,M2,M3,M4;
 public:
-  Charizard():Moves::Moves();
-  Charizard(int H, int S, int E,string N);
-  }
-  ;
+  Charizard(string nickname);
+  Moves getM1(){return M1;};
+  };
 #endif
