@@ -6,7 +6,7 @@ using namespace std;
 class Pokemon {
  protected:
   int Health;
-  string Element;
+  int Element;
   int Speed;
   string Name;
 
@@ -16,7 +16,7 @@ class Pokemon {
   virtual void takeDamage(int D);
   virtual int getHealth();
   virtual int getSpeed();
-  virtual string getElement();
+  virtual int getElement();
   virtual string getName();
  
 };

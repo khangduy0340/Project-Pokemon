@@ -3,11 +3,11 @@
  #include "Moves.h"
  using namespace std;
 
-Moves::Moves(string Mname,string Mtype,int Mpower){
-    this->moName = Mname;
-    this->Type = Mtype;
-    this->Power = Mpower; 
- }
+Moves::Moves(){
+    moName = "None";
+    Type = "Normal";
+    Power = 10;
+};
  string Moves::getMoveName(){return moName;};
  string Moves::getType(){return Type;}; 
  int Moves::getMovePower(){return Power;};

@@ -9,7 +9,7 @@ class Moves {
   string Type;
   int Power;
  public:
-  Moves(string Mname,string Mtype,int Power);
+  Moves();
   string getMoveName();
   string getType();
   int getMovePower();

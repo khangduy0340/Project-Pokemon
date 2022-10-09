@@ -14,8 +14,8 @@ using namespace std;
 void PokemonMenu() {
   int playerChoice;
   Charizard Charizard("Charizard");
-  Pokemon Geninja(8, 10, 1,"Geninja");
-  cout << "Charizard has first skill: " << Charizard.getM1().getMoveName();
+  Geninja Geninja(8, 10, 1,"Geninja");
+  cout << "Charizard has first skill: " << Charizard.getM1()->getMoveName();
   welcomeScreen();
   cin >> playerChoice;
   lineBreak();
