@@ -12,9 +12,6 @@
 #include "PokemonMenu.h"
 using namespace std;
 int main() {
- Charizard Charizard("2");
- cout << Charizard.getName()<< endl;
- cout << Charizard.getM1()->getMoveName();
- //PokemonMenu();
+ PokemonMenu();
  return 0;
 }

@@ -8,10 +8,15 @@ class Moves {
   string moName;
   string Type;
   int Power;
+
  public:
   Moves();
+  void setMoveName(string mName);
+  void setMoveType(string mType);
+  void setMovePower(int power);
   string getMoveName();
   string getType();
   int getMovePower();
+  
 };
 #endif

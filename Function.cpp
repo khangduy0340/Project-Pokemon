@@ -15,7 +15,6 @@ void PokemonCreation() {
   cout << "2. Geninja" << endl;
   cout << "Your choice: ";
 }
-void chooseCharizard() { cout << "Choose Charizard" << endl; }
 void gameOver() { cout << "game over" << endl; }
 void winMessage(string P) { cout << P << " wins!" << endl; }
 void enemyEncounter(string P) { cout << "Encounter " << P << endl;
@@ -80,13 +79,13 @@ void welcomeScreen(void) {
   PokemonCreation();
 }
 
-  void battle(Pokemon& C, Pokemon& S) {
+  void battle(Charizard& C, Pokemon& S) {
   int k =0;
   enemyEncounter(S.getName());
   while (C.getHealth() >= 0 && S.getHealth() >= 0) {
     showStats(C.getHealth(), C.getSpeed(), C.getElement(), S.getHealth(),
     S.getSpeed(), S.getElement(),C.getName(),S.getName());
-    S.takeDamage(actionBoard(1));
+    S.takeDamage(actionBoard(1,C,S));
     cout << endl;
     cout << "EMEMY MOVE: ";
     C.takeDamage(enemyAction(2));
