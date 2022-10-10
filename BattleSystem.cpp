@@ -6,17 +6,17 @@
  #include "Charizard.h"
  #include <string.h>
 
-
-  
-  
   int actionBoard(int t,Charizard& C,Pokemon& S) {
+    int skillAvailable = 1;
     int option = 0; 
     cout << endl;
     cout << "*******************************************************************" << endl;
     cout << "* Pick a Move:  " << endl;
     cout << "* 1. " << C.M1.getMoveName() << endl;
     cout << "* 2. " << C.M2.getMoveName() << endl;
-    cout << "* 3. " << C.M3.getMoveName() << endl;
+    if(skillAvailable==1){
+    cout << "* 3. " << C.M3.getMoveName() << endl;}
+    else{cout << "3. This skill is already used!" << endl;};
     cout << "* 4. " << C.M4.getMoveName() << endl;
     cout << "Your choice: ";
     cin >> option;
@@ -29,6 +29,7 @@
         return pokemonMove(C,S,C.M2.getType(),C.M2.getPower());
         break;
       case 3:
+        skillAvailable = 0;
         return pokemonMove(C,S,C.M3.getType(),C.M3.getPower());
         break;
       case 4:
@@ -39,11 +40,11 @@
     }
     return 0;
   }
-
+ 
   int pokemonMove(Charizard& C,Pokemon& S,string Type,int Power){
     int damage = 1;
     if(Type.compare("Normal")==0){return 1;};
-    if(Type.compare("Defense")==0){return 10;};
+    if(Type.compare("Defense")==0){return 0;};
 
     if(Type.compare("Unique")==0){return C.M3.getPower();};
  
@@ -64,5 +65,6 @@
 
 
  int enemyAction() {
+    cout << "Normal Strike for 1 damage";
     return 1;
   };

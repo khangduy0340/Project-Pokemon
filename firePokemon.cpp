@@ -7,4 +7,5 @@ firePokemon::firePokemon() {
     Health = 10;
     Element = 1;
     Speed = 10;
+    Armor = 0;
   }

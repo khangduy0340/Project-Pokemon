@@ -7,7 +7,7 @@ using namespace std;
 Charizard::Charizard(string nickname):M1(),M2(),M3(),M4() {
     Health = 10;
     Element = 1;
-    Speed = 10;
+    Speed = 3;
     Name = nickname;
 
     M1.setMoveName("Bite");

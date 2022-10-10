@@ -16,18 +16,19 @@ Pokemon::Pokemon():M1(),M2(),M3(),M4(){
     M3.setMoveName("3");
     M4.setMoveName("4");
 }
-Pokemon::Pokemon(int Health1,int Element1,int Speed1,string Name1){
+Pokemon::Pokemon(int Health1,int Element1,int Speed1,string Name1,int Armor1){
     this->Health = Health1;
     this->Element = Element1;
     this->Speed = Speed1;
     this->Name = Name1;
+    this->Armor = Armor1;
 } 
-void Pokemon::takeDamage(int D) { Health = Health - D; }
+void Pokemon::takeDamage(int D) { Health = Health + Armor - D; }
 int Pokemon::getHealth(void) { return Health; }
 int Pokemon::getSpeed(void) { return Speed; }
 int Pokemon::getElement(void) { return Element; }
 string Pokemon::getName(){return Name;}
-
+void Pokemon::setArmor(int Armor1){Armor=Armor1;};
 
 
 

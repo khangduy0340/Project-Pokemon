@@ -14,10 +14,8 @@ using namespace std;
 void PokemonMenu() {
   int playerChoice;
   Charizard Charizard("Charizard");
-  Pokemon Geninja(8, 10, 1,"Geninja");
-  //Moves M1;
-  //M1.setMoveName("Bite");
-  cout << "Charizard has first skill: "  << endl;
+  Pokemon Geninja(8, 1, 5,"Geninja",0);
+  
   welcomeScreen();
   cin >> playerChoice;
   lineBreak();
@@ -32,4 +30,5 @@ void PokemonMenu() {
       //break;
     //}
   //} 
+}
 }
