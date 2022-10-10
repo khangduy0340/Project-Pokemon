@@ -13,10 +13,10 @@ class Moves {
   Moves();
   void setMoveName(string mName);
   void setMoveType(string mType);
-  void setMovePower(int power);
+  void setPower(int power);
   string getMoveName();
   string getType();
-  int getMovePower();
+  int getPower();
   
 };
 #endif

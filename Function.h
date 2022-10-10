@@ -19,7 +19,7 @@ void showHealth(int health);
 void showSpeed(int speed);
 void showElement(int element);
 void showStats(int PH, int PS, int PE, int EH, int ES, int EE,string PN,string EN);
-void welcomeScreen(void); 
+void welcomeScreen(); 
 void battle(Charizard& C, Pokemon& S);
 
 #endif

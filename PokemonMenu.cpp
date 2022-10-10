@@ -26,10 +26,10 @@ void PokemonMenu() {
       battle(Charizard, Geninja);
       break;
     }
-  } else if (playerChoice == 2) {
-    while (Geninja.getHealth() > 0 && Geninja.getHealth() > 0) {
+  //} else if (playerChoice == 2) {
+    //while (Geninja.getHealth() > 0 && Geninja.getHealth() > 0) {
       //battle(Geninja, Geninja);
-      break;
-    }
-  } 
+      //break;
+    //}
+  //} 
 }

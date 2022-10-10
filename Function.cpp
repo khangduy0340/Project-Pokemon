@@ -88,7 +88,7 @@ void welcomeScreen(void) {
     S.takeDamage(actionBoard(1,C,S));
     cout << endl;
     cout << "EMEMY MOVE: ";
-    C.takeDamage(enemyAction(2));
+    C.takeDamage(enemyAction());
     cout << endl;
     k++;
     lineBreak();
